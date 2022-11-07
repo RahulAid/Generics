@@ -1,16 +1,26 @@
 ﻿namespace Generics
 {
-    internal class Program
+    public class PrintArray<T>
     {
-        public static void data<T>(T[] inputArray)
+        public T[] inputArray;
+
+        public PrintArray(T[] inputArray)
         {
-            Console.WriteLine($"Array with Datatype {typeof(T)} : ");
+            this.inputArray = inputArray;
+        }
+
+        public void toPrint()
+        {
+            Console.WriteLine($"\n Array of Type {typeof(T)} : ");
             foreach (var item in inputArray)
             {
                 Console.WriteLine(item);
             }
         }
-       
+    }
+
+    class Program
+    {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Generics Program");
@@ -19,9 +29,9 @@
             double[] doubleArray = { 2.1, 2.2, 2.3, 2.4, 2.5 };
             char[] charArray = { 'G', 'E', 'N', 'E', 'R', 'I', 'C', 'S' };
 
-            Program.data<int>(intArray);
-            Program.data<double>(doubleArray);
-            Program.data<char>(charArray);
+            new PrintArray<int>(intArray).toPrint();
+            new PrintArray<double>(doubleArray).toPrint();
+            new PrintArray<char>(charArray).toPrint();
 
             Console.ReadLine();
         }
