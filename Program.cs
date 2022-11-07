@@ -4,16 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter First Value");
-            string? firstValue = Console.ReadLine();
+            MaximumValue<int>.MaximumStringValue(7, 5, 3);
 
-            Console.WriteLine("Enter Second Value");
-            string? secondValue = Console.ReadLine();
+            MaximumValue<float>.MaximumStringValue(9.6f, 48.6f, 52.4f);
 
-            Console.WriteLine("Enter Third Value");
-            string? thirdValue = Console.ReadLine();
-
-            MaximumValue.MaximumStringValue(firstValue, secondValue, thirdValue);
+            MaximumValue<string>.MaximumStringValue("John", "Fn", "Kennedy");
         }
     }
 }
