@@ -2,33 +2,15 @@
 {
     internal class Program
     {
-        public static void data(int[] inputArray)
+        public static void data<T>(T[] inputArray)
         {
-            Console.WriteLine("Array with Datatype Int : ");
+            Console.WriteLine($"Array with Datatype {typeof(T)} : ");
             foreach (var item in inputArray)
             {
                 Console.WriteLine(item);
             }
         }
-
-        public static void data(double[] inputArray)
-        {
-            Console.WriteLine("\nArray with Datatype Double : ");
-            foreach (var item in inputArray)
-            {
-                Console.WriteLine(item);
-            }
-        }
-
-        public static void data(char[] inputArray)
-        {
-            Console.WriteLine("\nArray with Datatype Char : ");
-            foreach (var item in inputArray)
-            {
-                Console.WriteLine(item);
-            }
-        }
-
+       
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Generics Program");
@@ -37,9 +19,9 @@
             double[] doubleArray = { 2.1, 2.2, 2.3, 2.4, 2.5 };
             char[] charArray = { 'G', 'E', 'N', 'E', 'R', 'I', 'C', 'S' };
 
-            Program.data(intArray);
-            Program.data(doubleArray);
-            Program.data(charArray);
+            Program.data<int>(intArray);
+            Program.data<double>(doubleArray);
+            Program.data<char>(charArray);
 
             Console.ReadLine();
         }
