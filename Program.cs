@@ -5,15 +5,15 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Enter First Value");
-            float firstValue = Convert.ToSingle(Console.ReadLine());
+            string? firstValue = Console.ReadLine();
 
             Console.WriteLine("Enter Second Value");
-            float secondValue = Convert.ToSingle(Console.ReadLine());
+            string? secondValue = Console.ReadLine();
 
             Console.WriteLine("Enter Third Value");
-            float thirdValue = Convert.ToSingle(Console.ReadLine());
+            string? thirdValue = Console.ReadLine();
 
-            MaximumValue.MaximumFloatNumber(firstValue, secondValue, thirdValue);
+            MaximumValue.MaximumStringValue(firstValue, secondValue, thirdValue);
         }
     }
 }
