@@ -4,11 +4,10 @@
     {
         static void Main(string[] args)
         {
-            MaximumValue<int>.MaximumStringValue(7, 5, 3);
+            int[] arr = { 100, 300, 400, 500, 600 };
 
-            MaximumValue<float>.MaximumStringValue(9.6f, 48.6f, 52.4f);
-
-            MaximumValue<string>.MaximumStringValue("John", "Fn", "Kennedy");
+            MaximumValue<int> maximumValue = new MaximumValue<int>(arr);
+            maximumValue.PrintMaxValue();
         }
     }
 }
